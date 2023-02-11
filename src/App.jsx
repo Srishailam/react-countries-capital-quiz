@@ -7,13 +7,16 @@ function App() {
   const [value, setValue] = useState('');
   const [countries, setCountries] = useState([]);
   const [filteredCountries, setFilteredCountries] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true)
     fetch('https://restcountries.com/v3.1/all')
       .then(response => response.json())
       .then(data => {
         const countries = data.map(country => country);
         setCountries(countries);
+        setIsLoading(false);
       });
   }, []);
 
@@ -40,6 +43,11 @@ function App() {
     setValue(value);
     debouncedCallback();
   };
+
+  if(isLoading){
+    return 'Loading....'
+  }
+
 
   return (
     <div className="App">
