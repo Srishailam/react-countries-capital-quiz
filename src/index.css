@@ -78,11 +78,13 @@ ul li {
   padding:20px;
   border:1px solid #ccc;
   margin: 2px;
+  background: white;
  }
  ul li img {
    border-radius:50%;
    width:50px;
    height:50px;
+   border: 1px solid #7d7a7a;
  }
  ul li h1 {
    margin-left:70px;
@@ -95,7 +97,7 @@ ul li {
    margin-top:0px;
  }
  ul li:hover {
-   background:gray;
+   background: #acbdcb
  }
  .App-filters{
   display: flex;
