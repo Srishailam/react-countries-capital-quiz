@@ -124,3 +124,9 @@ ul li {
   margin: 3px 1px;
   width: 599px;
 }
+
+@media (max-width:600px)  {
+  .App-filters{
+    all: unset;
+  }
+}
