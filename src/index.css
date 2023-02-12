@@ -43,15 +43,14 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 .App-container {
-  display: flex;
-  width: 500px;
+  width: 600px;
   height: 60px;
   margin: 20px auto;
   justify-content: center;
   position: relative;
 }
 
-.App-container input{
+.App-container input.App-input{
   border-radius: 8px;
   display: flex;
   width: 100%;
@@ -63,7 +62,7 @@ button:focus-visible {
 }
 .App-results{
   position: absolute;
-  top: 80px;
+  top: 105px;
   border-radius: 8px;
   display: flex;
   width: 100%;
@@ -98,3 +97,18 @@ ul li {
  ul li:hover {
    background:gray;
  }
+ .App-filters{
+  display: flex;
+ }
+ .App-filters p{
+  padding-top: 10px;
+  padding-right: 5px;
+ }
+
+ .App-filters label{
+  margin-left: 5px;
+ }
+.App-filters p.count{
+  color: darkblue;
+  font-size: medium;
+}
