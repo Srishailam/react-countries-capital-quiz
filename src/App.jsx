@@ -73,8 +73,9 @@ function App() {
   return (
     <div className="App">
       <div className="App-container">
-        <input className='App-input' type="text" onChange={onChange} value={value} placeholder="Search for a country name..."/>
-        <div className='App-filters'>
+        <div className='App-Filter-Wrapper'>
+          <input className='App-input' type="text" onChange={onChange} value={value} placeholder="Search for a country name..."/>
+          <div className='App-filters'>
           {
             continets.map(c => {
               return (
@@ -88,6 +89,7 @@ function App() {
           {
             <p className='count'>{`Total:${filteredCountries.length}`}</p>
           }
+          </div>
         </div>
         <div className='App-results'>
           <ul>

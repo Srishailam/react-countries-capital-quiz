@@ -3,6 +3,7 @@
   margin:0;
   list-style-type:none;
   font-family:arial;
+  box-sizing: border-box;
 }
 a {
   font-weight: 500;
@@ -44,7 +45,6 @@ button:focus-visible {
 }
 .App-container {
   width: 600px;
-  height: 60px;
   margin: 20px auto;
   justify-content: center;
   position: relative;
@@ -54,7 +54,7 @@ button:focus-visible {
   border-radius: 8px;
   display: flex;
   width: 100%;
-  padding: 10px;
+  padding: 10px 0px;
   height: 100%;
   border: 2px solid #eee;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
@@ -62,7 +62,7 @@ button:focus-visible {
 }
 .App-results{
   position: absolute;
-  top: 105px;
+  top: 100px;
   border-radius: 8px;
   display: flex;
   width: 100%;
@@ -113,4 +113,14 @@ ul li {
 .App-filters p.count{
   color: darkblue;
   font-size: medium;
+}
+.App-Filter-Wrapper{
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  background: #acbdcb;
+  box-shadow: 0 0 15px 4px rgb(0 0 0 / 6%);
+  padding: 20px 0;
+  margin: 3px 1px;
+  width: 599px;
 }
