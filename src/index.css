@@ -129,4 +129,7 @@ ul li {
   .App-filters{
     all: unset;
   }
+  .App-results {
+    top: 280px;
+  }
 }
