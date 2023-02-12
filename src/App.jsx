@@ -27,7 +27,8 @@ function App() {
   const sendRequest = () => {
     const filteredCountriesByQuery = countries.filter(country => country.name.common.toLowerCase().includes(value.toLowerCase()));
     const filteredCountriesByContinents = filteredCountriesByQuery.filter(country => selectedContinets.length === 0 ? true : selectedContinets.includes(country.continents[0]))
-    setFilteredCountries(filteredCountriesByContinents);
+    const filteredCountriesBySort = filteredCountriesByContinents.sort((a, b) => a.name.common.toLowerCase().localeCompare(b.name.common.toLowerCase()) );
+    setFilteredCountries(filteredCountriesBySort);
   }
 
   const ref = useRef(sendRequest);
